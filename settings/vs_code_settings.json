@@ -1,0 +1,29 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "python.jediEnabled": false,
+    "workbench.colorTheme": "Monokai",
+    "workbench.iconTheme": "vs-minimal",
+    "editor.formatOnSave": true,
+    "code-runner.executorMap": {
+        "python": "pipenv run python $fullFileName"
+    },
+    "code-runner.showExecutionMessage": false,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.saveAllFilesBeforeRun": true,
+    "code-runner.runInTerminal": true,
+    "git.autofetch": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    "editor.renderWhitespace": "none",
+    "python.languageServer": "Microsoft",
+    "python.defaultInterpreterPath": ".pyenv/shims/python",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.automationShell.osx": "/bin/zsh"
+}

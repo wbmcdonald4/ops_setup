@@ -1,0 +1,3 @@
+alias psh="pipenv shell"
+alias clean_downloads='rm -rf ~/Downloads/*'
+alias clean_desktop='rm -rf ~/Desktop/*'
