@@ -33,19 +33,24 @@ for file in $files; do
     ln -sf ${dotfiledir}/.${file} ${homedir}/.${file}
 done
 
+
 # Run the zshrc Script
-${homedir}/ops_setup/sub_scripts/zshrc.sh
+chmod +x ${homedir}/GitHub/ops_setup/sub_scripts/zshrc.sh
+${homedir}/GitHub/ops_setup/sub_scripts/zshrc.sh
 
 # Run the Homebrew Script
-${homedir}/ops_setup/sub_scripts/brew.sh
+chmod +x ${homedir}/GitHub/ops_setup/sub_scripts/brew.sh
+${homedir}/GitHub/ops_setup/sub_scripts/brew.sh
 
 # Run the pyenv Script
-${homedir}/ops_setup/sub_scripts/pyenv.sh
+chmod +x ${homedir}/GitHub/ops_setup/sub_scripts/pyenv.sh
+${homedir}/GitHub/ops_setup/sub_scripts/pyenv.sh
 
 # Run the github Script
-${homedir}/ops_setup/sub_scripts/github.sh
+chmod +x ${homedir}/GitHub/ops_setup/sub_scripts/github.sh
+${homedir}/GitHub/ops_setup/sub_scripts/github.sh
 
 # Run the vscode Script
-chmod +x ${homedir}/ops_setup/sub_scripts/vscode.sh # give executable permissions to the file
-${homedir}/ops_setup/sub_scripts/vscode.sh
+chmod +x ${homedir}/GitHub/ops_setup/sub_scripts/vscode.sh # give executable permissions to the file
+${homedir}/GitHub/ops_setup/sub_scripts/vscode.sh
 

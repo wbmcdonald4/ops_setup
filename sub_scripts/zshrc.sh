@@ -1,3 +1,5 @@
+# Current Issue: Only ran up to the first line and stopped
+
 # Intsll oh-my-zsh (this might need to be done first) - also need to run command to clear .zshrc file after this install
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 

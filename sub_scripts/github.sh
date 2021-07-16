@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
-cd .. 
+# GitHub set up needed for ops prior to runnig the script
+cd ../.. 
 
 # OBSOLETE: git clone https://github.com/partnerstack/johto.git # johto 
 git clone https://github.com/partnerstack/opspipeline.git # opspipeline
