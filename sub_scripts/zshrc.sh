@@ -12,5 +12,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 # clone powerlevel10k into oh-my-zsh
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-# remember to turn set this variable to true
-typeset -g POWERLEVEL9K_VIRTUALENV_SHOW_WITH_PYENV=true
+# change the following variables in the ~/.p10k.zsh file
+# typeset -g POWERLEVEL9K_VIRTUALENV_SHOW_WITH_PYENV=true
+# typeset -g POWERLEVEL9K_INSTANT_PROMPT=off

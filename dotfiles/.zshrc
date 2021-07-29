@@ -12,7 +12,7 @@ export ZSH=$HOME/.oh-my-zsh
 # set zsh plugins
 plugins=(
     colorize
-    dotenv
+    #  dotenv
     git
     # pipenv - faced issues with this
     pyenv
@@ -34,7 +34,18 @@ source $HOME/.aliases
 export PIPENV_NO_INHERIT=True
 
 # Github pull request function
-function gpr {
+gprmaster() {
+  if [ $? -eq 0 ]; then
+    github_url=`git remote -v | awk '/fetch/{print $2}' | sed -Ee 's#(git@|git://)#http://#' -e 's@com:@com/@' -e 's%\.git$%%'`;
+    branch_name=`git symbolic-ref HEAD 2>/dev/null | cut -d"/" -f 3`;
+    pr_url=$github_url"/compare/master..."$branch_name
+    open $pr_url;
+  else
+    echo 'failed to open a pull request.';
+  fi
+}
+
+gprmain() {
   if [ $? -eq 0 ]; then
     github_url=`git remote -v | awk '/fetch/{print $2}' | sed -Ee 's#(git@|git://)#http://#' -e 's@com:@com/@' -e 's%\.git$%%'`;
     branch_name=`git symbolic-ref HEAD 2>/dev/null | cut -d"/" -f 3`;
@@ -45,7 +56,12 @@ function gpr {
   fi
 }
 
+gpo() {
+    branch_name=`git symbolic-ref HEAD 2>/dev/null | cut -d"/" -f 3`;
+    git push origin $branch_name
+}
 
+# initiate pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init --path)"
 fi
