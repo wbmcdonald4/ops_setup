@@ -33,24 +33,23 @@ for file in $files; do
     ln -sf ${dotfiledir}/.${file} ${homedir}/.${file}
 done
 
-
-# Run the zshrc Script
-chmod +x ${homedir}/GitHub/ops_setup/sub_scripts/zshrc.sh
-${homedir}/GitHub/ops_setup/sub_scripts/zshrc.sh
-
 # Run the Homebrew Script
 chmod +x ${homedir}/GitHub/ops_setup/sub_scripts/brew.sh
 ${homedir}/GitHub/ops_setup/sub_scripts/brew.sh
+
+# re-initial terminal so that it knows to use pyenv
+source ~/.zshrc 
 
 # Run the pyenv Script
 chmod +x ${homedir}/GitHub/ops_setup/sub_scripts/pyenv.sh
 ${homedir}/GitHub/ops_setup/sub_scripts/pyenv.sh
 
-# Run the github Script
-chmod +x ${homedir}/GitHub/ops_setup/sub_scripts/github.sh
-${homedir}/GitHub/ops_setup/sub_scripts/github.sh
-
 # Run the vscode Script
-chmod +x ${homedir}/GitHub/ops_setup/sub_scripts/vscode.sh # give executable permissions to the file
+chmod +x ${homedir}/GitHub/ops_setup/sub_scripts/vscode.sh
 ${homedir}/GitHub/ops_setup/sub_scripts/vscode.sh
 
+
+# The following two scripts typically have issues and have to be run manually
+# Run the zshrc Script
+chmod +x ${homedir}/GitHub/ops_setup/sub_scripts/zshrc.sh
+${homedir}/GitHub/ops_setup/sub_scripts/zshrc.sh

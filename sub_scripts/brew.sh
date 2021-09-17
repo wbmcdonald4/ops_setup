@@ -15,11 +15,11 @@ brew install zlib
 brew install postgresql
 
 # Install MacOS Applications
-#brew install --cask google-chrome
+brew install --cask google-chrome
 brew install --cask notion
 brew install --cask visual-studio-code
-#brew install --cask zoom
-#brew install --cask slack
+brew install --cask zoom
+brew install --cask slack
 brew install --cask 1password
 brew install --cask ssh-tunnel-manager
 brew install --cask iterm2
