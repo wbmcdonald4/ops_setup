@@ -12,4 +12,4 @@
 
 note, it will ask you for your password from time to time, so be aware (OR figure out how to give it permissions beforehand)
 
-note, I removed the GitHub repo install script b/c you need to set up your private/public ssh key first before accessing it. See Notion for more info.
+note, I removed the GitHub repo install script b/c you need to authenticate before hand. This can be done by pushing a commit to a remote branch on this repo, or find another way
